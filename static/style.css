@@ -1,0 +1,147 @@
+/* Estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+html, body {
+    height: 100%; /* Garantir que o body ocupe toda a altura da tela */
+    width: 100%;
+}
+
+body {
+    background: linear-gradient(135deg, #6fa3ef, #4a73e7); /* Gradiente suave de azul */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    padding: 0 15px; /* Pequeno padding para evitar que o conteúdo fique colado nas bordas */
+}
+
+/* Container principal */
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;  /* Limite de largura para que o layout não fique muito largo */
+    text-align: center;
+    margin-top: 20px;
+}
+
+h1 {
+    color: #4a73e7;  /* Cor azul suave */
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: #4a73e7;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+/* Estilo dos inputs */
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 2px solid #d1d1d1;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus {
+    border-color: #4a73e7;
+    outline: none;
+}
+
+/* Botão de submit */
+button {
+    background-color: #4a73e7;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #3b60d3;
+}
+
+button:active {
+    background-color: #3251b7;
+}
+
+/* Tabela de resultados */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+table th {
+    background-color: #4a73e7;
+    color: white;
+    font-weight: bold;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+    background-color: #e6e6e6;
+}
+
+table tbody td {
+    color: #333;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"] {
+        font-size: 0.9rem;
+    }
+
+    table th, table td {
+        font-size: 0.9rem;
+    }
+}

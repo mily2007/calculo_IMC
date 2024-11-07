@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Calculadora de IMC{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Cabeçalho -->
+        <header>
+            <h1>{% block header %}Calculadora de IMC{% endblock %}</h1>
+        </header>
+
+        <!-- Conteúdo da página -->
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+
+        <!-- Rodapé -->
+        <footer>
+            <p>&copy; 2024 - Calculadora de IMC. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>

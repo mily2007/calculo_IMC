@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados IMC</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Resultados do IMC</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Peso</th>
+                    <th>Altura</th>
+                    <th>IMC</th>
+                    <th>Classificação</th>
+                    <th>Data</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for imc in imcs %}
+                <tr>
+                    <td>{{ imc.peso }}</td>
+                    <td>{{ imc.altura }}</td>
+                    <td>{{ imc.imc }}</td>
+                    <td>{{ imc.classificacao }}</td>
+                    <td>{{ imc.data_calculo }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

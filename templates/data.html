@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados Armazenados</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Dados Armazenados</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Peso</th>
+                    <th>Altura</th>
+                    <th>IMC</th>
+                    <th>Classificação</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for dado in dados %}
+                    <tr>
+                        <td>{{ dado[0] }}</td>
+                        <td>{{ dado[1] }}</td>
+                        <td>{{ dado[2] }}</td>
+                        <td>{{ dado[3] }}</td>
+                        <td>{{ dado[4] | round(2) }}</td>
+                        <td>{{ dado[5] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <br>
+        <a href="{{ url_for('index') }}">Voltar</a>
+    </div>
+</body>
+</html>
+
